@@ -5,9 +5,8 @@ metadata:
   name: front-end
   labels:
     name: front-end
-  namespace: sock-shop
+  namespace: istio-shop
 spec:
-  type: LoadBalancer
   ports:
   - port: 80
     targetPort: 8079

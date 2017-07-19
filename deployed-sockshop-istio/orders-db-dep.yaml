@@ -5,7 +5,7 @@ metadata:
   name: orders-db
   labels:
     name: orders-db
-  namespace: sock-shop
+  namespace: istio-shop
 spec:
   replicas: 1
   template:
