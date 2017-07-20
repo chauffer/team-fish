@@ -190,6 +190,25 @@ spec:
         ports:
         - containerPort: 9080
 ---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: productpage-v2
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: productpage
+        version: v2
+    spec:
+      containers:
+      - name: productpage
+        image: istio/examples-bookinfo-productpage-v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 9080
+---
 ###########################################################################
 # Ingress resource (gateway)
 ##########################################################################
