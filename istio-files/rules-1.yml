@@ -1,0 +1,8 @@
+destination: reviews.default.svc.cluster.local
+route:
+- tags:
+    version: v2
+  weight: 25
+- tags:
+    version: v1
+  weight: 75
